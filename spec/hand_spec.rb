@@ -12,7 +12,7 @@ describe Hand do
     ])
   end
 
-  it "has 5 cards" do
+  it "::get_hand has 5 cards" do
     expect(deck).to receive(:take).with(5).and_return(deck.cards)
     hand = Hand.get_hand(deck)
     expect(hand.cards.length).to eq(5)
